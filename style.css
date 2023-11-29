@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;   
+    height: 100vh;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+aside{
+    flex: 1;
+    background-color: rgb(121, 121, 121);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main{
+    flex: 2;
+    background-color: rgb(99, 99, 99);
+}
+
+input[type="color"],
+button{
+    width: 100%;
+    height: 2rem;
+}
