@@ -23,3 +23,9 @@ button{
     width: 100%;
     height: 2rem;
 }
+
+input[type="range"],
+button{
+    width:100%;
+    height:2rem;
+}

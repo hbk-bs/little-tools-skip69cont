@@ -2,6 +2,8 @@ const saveButton = document.querySelector
     ("button#save");
 const colorInput = document.querySelector
     ("input#color");
+const rangeInput= document.querySelector
+    ("input#range");
 console.log(colorInput);
 
 let paintColor = '#ff3456'
@@ -17,6 +19,9 @@ function setup() {
    colorInput.addEventListener("input", ()=>{
         paintColor = colorInput.value;
    });
+   rangeInput.addEventListener("input", ()=>{
+        range = rangeInput.value;
+   });
 }
    
 function draw() {
@@ -25,13 +30,13 @@ function draw() {
 
 function mouseDragged(){
     fill(paintColor);
-    circle(mouseX,mouseY, 10);
+    circle(mouseX,mouseY, range );
     line(pmouseX, pmouseY, pmouseX, pmouseY);
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 500; i++) {
 
         point(
-            mouseX+random(-10,10),
-            mouseY+random(-10,10));
+            mouseX+random(-range,range),
+            mouseY+random(-range,range));
         
     }
 }
